@@ -1,0 +1,37 @@
+{
+  "name": "Generador-ANTLR",
+  "version": "2.11",
+  "description": "Generador ANTLR (lexer + parser).",
+  "main": "../../sysl/genera.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "cpu": [],
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": "^4.1.2"
+  },
+  "dependencies": {
+    "react-dom": ">=16.9",
+    "react-redux": "^7.2.0",
+    "react-router-dom": ">4.0.0",
+    "recharts": "^1.8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sysl-tp-2024.git",
+    "license": ""
+  },
+  "bugs": {
+    "url": "http://github.com/sysl-tp-2024/issues",
+    "email": null,
+    "version-bug": "^2",
+    "path": "./sysl/2024"
+  },
+  "author": {
+    "contributor": "John Hopcroft",
+    "email": "johnhopcroft@cornell.edu",
+    "url": "https://www.cs.cornell.edu/jeh"
+  }
+}

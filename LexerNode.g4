@@ -7,12 +7,6 @@ fragment SEPARADORES:   ('-' | '_'|'.'| '('| ')');
 fragment CARACTERES:    (':' | '#' | '=' | '&' | '@' | '+' | '?');
 fragment COMPARADORES:  ('=' | '<' | '>' | '<=' | '>=' | '^');
 
-VAL_BOLEANO: ('true' | 'false');
-// VAL_VERSION: COMPARADORES . (NUMERO . SEPARADORES)* {System.out.print(getText());}; //
-VAL_VERSION: '"' . COMPARADORES . ('.' NUMERO+)* . '"' {System.out.print(getText());};
-VAL_URL_SEGURA: '"https://' . (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | CARACTERES)* . '"' {System.out.print(getText());} ;
-VAL_URL_NO_SEGURA: '"http://' . (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | CARACTERES)* . '"' {System.out.print(getText());} ;
-
 WS: [ \r\n\t] -> skip;
 
 OBJETO_ABRE:    '{' {System.out.print(" <OBJETO_ABRE> ");} ;
@@ -39,3 +33,11 @@ CADENA_NODE: '"node"' {System.out.print(" <CADENA_NODE> ");} ;
 CADENA_NPM: '"npm"' {System.out.print(" <CADENA_NPM> ");} ;
 CADENA_YARN: '"yarn"' {System.out.print(" <CADENA_YARN> ");} ;
 VAL_NULL: 'null' {System.out.print(" <VAL_NULL> ");} ;
+
+VAL_BOLEANO: ('true' | 'false');
+VAL_VERSION: '"' . COMPARADORES . ('.' NUMERO+)* . '"' {System.out.print("<VAL_VERSION: "+ getText() +" >");};
+VAL_URL_SEGURA: '"https://' . (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | CARACTERES)* . '"' {System.out.print("<VAL_URL_SEGURA: "+ getText() +" >");};
+VAL_URL_NO_SEGURA: '"http://' . (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | CARACTERES)* . '"' {System.out.print("<VAL_URL_NO_SEGURA: "+ getText() +" >");};
+VAL_RUTA:   ('"/' | '"../') . (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | '/' | '../' )* .('"' | '/"') {System.out.print("<VAL_RUTA: "+ getText() +" >");};
+VCR:    '"' . MINUSCULA . (MINUSCULA | NUMERO  | SEPARADORES)* . '"' {System.out.print("<VCR: "+ getText() +" >");};
+VC: '"' . (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | CARACTERES | COMPARADORES | '/' | ' ' | ',')* .'"' {System.out.print("<VC: "+ getText() +" >");};

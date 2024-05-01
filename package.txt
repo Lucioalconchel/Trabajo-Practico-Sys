@@ -1,8 +1,10 @@
-{ }
-main
+{ },
 "name"
-name
-dependencies
 ">=4.31.11"
 "https://lucioalconchel"
 "http://haymamaa"
+"../opt/"
+"/usuario/lucio/escritorio"
+"../../puto/"
+"license-gpl"
+"Terence Parr, Univ. de San Francisco"
