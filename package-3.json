@@ -1,0 +1,37 @@
+{
+  "name": "ETAPA_1",
+  "version": "4.7.12",
+  "description": "Etapa 1 ",
+  "main": "/usr/etapa_1/lexer.js",
+  "keywords": ["sysl", "etapa_1", "TP", "json"],
+  "author": {
+    "contributor": "Terence Parr",
+    "email": "terenceparr@gmail.com"
+  },
+  "scripts": {},
+  "engines": {
+    "yarn": "^4.0",
+    "npm": ">4.2",
+    "node": "=7.0.0"
+  },	
+  "dependencies": {
+    "moment": "=2.24.0",
+    "react": ">16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1",
+    "redux": "<=4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sysl-tp.git",
+    "directory": "/react-dom/app",
+    "git-version": ">=2.20"
+  },
+  "bugs": {
+    "url": "http://github.com/sysl-tp/issues",
+    "path": "./sysl/2024"
+  },
+  "homepage": "https://github.com/sysl-tp#readme"
+}
