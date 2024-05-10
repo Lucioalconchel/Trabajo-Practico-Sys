@@ -39,7 +39,7 @@ VAL_NULL:               'null' {System.out.print(" <VAL_NULL> ");} ;
 VAL_BOLEANO:            ('true' | 'false') {System.out.print("<VAL_BOLEANO: "+ getText() +" >");};
 VAL_VERSION:            '"' ((COMPARADORES* NUMERO+)|NUMERO+) ('.' NUMERO+)* '"' {System.out.print("<VAL_VERSION: " + getText() + " >");};
 VAL_URL_SEGURA:         '"https://' (MINUSCULA+ | MAYUSCULA+ | NUMERO+ | SEPARADORES+ | CARACTERES+) ( (MINUSCULA+ | MAYUSCULA+ | NUMERO+ | SEPARADORES+ | CARACTERES+) | '/' )* '"'  {System.out.print("<VAL_URL_SEGURA: "+ getText() +" >");};
-VAL_URL_NO_SEGURA:      '"https//' (MINUSCULA+ | MAYUSCULA+ | NUMERO+ | SEPARADORES+ | CARACTERES+) ( (MINUSCULA+ | MAYUSCULA+ | NUMERO+ | SEPARADORES+ | CARACTERES+) | '/' )* '"'    {System.out.print("<VAL_URL_NO_SEGURA: "+ getText() +" >");};
+VAL_URL_NO_SEGURA:      '"http://' (MINUSCULA+ | MAYUSCULA+ | NUMERO+ | SEPARADORES+ | CARACTERES+) ( (MINUSCULA+ | MAYUSCULA+ | NUMERO+ | SEPARADORES+ | CARACTERES+) | '/' )* '"'    {System.out.print("<VAL_URL_NO_SEGURA: "+ getText() +" >");};
 VAL_RUTA:               ('"/' | '"../' | '"./')  (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | '/' | '../' )* ('"' | '/"') {System.out.print("<VAL_RUTA: "+ getText() +" >");};
 VCR:                    '"' MINUSCULA+  (MINUSCULA | NUMERO  | SEPARADORES)*  '"' {System.out.print("<VCR: "+ getText() +" >");};
 VC:                     '"' (MINUSCULA | MAYUSCULA | NUMERO | SEPARADORES | CARACTERES | COMPARADORES | '/' | ' ')* '"' {System.out.print("<VC: "+ getText() +" >");};
