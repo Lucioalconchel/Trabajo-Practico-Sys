@@ -1,20 +1,20 @@
 {
-  "name": "SySL-tp-2024",
-  "description": "Ejemplo 1 - archivo package.json",
-  "main": "./src/index.js",
-  "version": "1.0.0",
-  "homepage": "https://github.com/sysl-tp#readme",
-  "private": false,
-  "cpu": ["x32", "ia-64"],
-  "engines": {
-    "npm": "<=4.1.2"
+  "name":"SySL-tp-2024",
+  "description":"Ejemplo 1 - archivo package.json",
+  "main":"./src/index.js",
+  "version":"1.0.0",
+  "homepage":"https://github.com/sysl-tp#readme",
+  "private":false,
+  "cpu":["x32","ia-64"],
+  "engines":{
+    "npm":"<=4.1.2"
   },	
-  "dependencies": {
+  "dependencies":{
     "moment": "^2.24.0",
     "redux": "=4.1"
   },
-  "repository": {
-    "type": "git",
-    "git-version": ">=2.20"
+  "repository":{
+    "type":"git",
+    "git-version":">=2.20"
   }
 }

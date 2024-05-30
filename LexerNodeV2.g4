@@ -13,28 +13,28 @@ OBJETO_ABRE: '{';
 OBJETO_CIERRA: '}';
 OBJETO_SEPARA: ',';
 ELEMENTO_SEPARA: ':';
-ARREGLO_ABRE: '[' -> skip;
-ARREGLO_CIERRA: ']' -> skip;
+ARREGLO_ABRE: '[';
+ARREGLO_CIERRA: ']';
 CADENA_NAME: '"name"';
 CADENA_VERSION: '"version"';
 CADENA_DESCRIPTION: '"description"';
-CADENA_AUTHOR: '"author"' -> skip;
-CADENA_MAIN: '"main"' -> skip;
-CADENA_PRIVATE: '"private"' -> skip;
-CADENA_SCRIPTS: '"scripts"' -> skip;
-CADENA_DEPENDENCIES: '"dependencies"' -> skip;
-CADENA_ENGINES: '"engines"' -> skip;
-CADENA_REPOSITORY: '"repository"' -> skip;
-CADENA_KEYWORDS: '"keywords"' -> skip;
-CADENA_CPU: '"cpu"' -> skip;
-CADENA_HOMEPAGE: '"homepage"' -> skip;
-CADENA_BUGS: '"bugs"' -> skip;
-CADENA_NODE: '"node"' -> skip;
-CADENA_NPM: '"npm"' -> skip;
-CADENA_YARN: '"yarn"' -> skip;
-VAL_NULL: 'null' -> skip;
+CADENA_AUTHOR: '"author"';
+CADENA_MAIN: '"main"';
+CADENA_PRIVATE: '"private"';
+CADENA_SCRIPTS: '"scripts"';
+CADENA_DEPENDENCIES: '"dependencies"';
+CADENA_ENGINES: '"engines"';
+CADENA_REPOSITORY: '"repository"';
+CADENA_KEYWORDS: '"keywords"';
+CADENA_CPU: '"cpu"';
+CADENA_HOMEPAGE: '"homepage"';
+CADENA_BUGS: '"bugs"';
+CADENA_NODE: '"node"';
+CADENA_NPM: '"npm"';
+CADENA_YARN: '"yarn"';
+VAL_NULL: 'null';
 
-VAL_BOLEANO: ('true' | 'false') -> skip;
+VAL_BOLEANO: ('true' | 'false');
 VAL_VERSION:
 	'"' ((COMPARADORES* NUMERO+) | NUMERO+) ('.' NUMERO+)* '"';
 VAL_URL_SEGURA:
@@ -70,7 +70,7 @@ VAL_URL_NO_SEGURA:
 			| CARACTERES+
 		)
 		| '/'
-	)* '"' -> skip;
+	)* '"';
 VAL_RUTA: ('"/' | '"../' | '"./') (
 		MINUSCULA
 		| MAYUSCULA
@@ -90,4 +90,4 @@ VC:
 		| COMPARADORES
 		| '/'
 		| ' '
-	)* '"' -> skip;
+	)* '"';
